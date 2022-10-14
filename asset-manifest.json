@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/car-leasing-calculator/static/css/main.3f1fc66c.css",
+    "main.js": "/car-leasing-calculator/static/js/main.bc6b30f0.js",
+    "static/media/Mont-Heavy.woff": "/car-leasing-calculator/static/media/Mont-Heavy.235606fac6f32b88355c.woff",
+    "static/media/Mont-SemiBold.woff": "/car-leasing-calculator/static/media/Mont-SemiBold.5d4afcfe00f8d6a38e5f.woff",
+    "static/media/Nekst-Black.woff": "/car-leasing-calculator/static/media/Nekst-Black.f0e2921efcf1112b1749.woff",
+    "static/media/Mont-Heavy.woff2": "/car-leasing-calculator/static/media/Mont-Heavy.1a5d4089eeb291d65b03.woff2",
+    "static/media/Mont-SemiBold.woff2": "/car-leasing-calculator/static/media/Mont-SemiBold.95ab478c134f9e9da545.woff2",
+    "static/media/Nekst-Black.woff2": "/car-leasing-calculator/static/media/Nekst-Black.44814bfd3ba4a266cf1d.woff2",
+    "static/media/Gilroy-Bold.woff": "/car-leasing-calculator/static/media/Gilroy-Bold.0607a1bc636f63251ed8.woff",
+    "static/media/Gilroy-Regular.woff": "/car-leasing-calculator/static/media/Gilroy-Regular.ebe86c0337572553acea.woff",
+    "static/media/Gilroy-Bold.woff2": "/car-leasing-calculator/static/media/Gilroy-Bold.ef7c40ff1efeaaa4c7c6.woff2",
+    "static/media/Gilroy-Regular.woff2": "/car-leasing-calculator/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
+    "index.html": "/car-leasing-calculator/index.html",
+    "main.3f1fc66c.css.map": "/car-leasing-calculator/static/css/main.3f1fc66c.css.map",
+    "main.bc6b30f0.js.map": "/car-leasing-calculator/static/js/main.bc6b30f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f1fc66c.css",
+    "static/js/main.bc6b30f0.js"
+  ]
+}
