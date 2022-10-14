@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/car-leasing-calculator/static/css/main.265323f1.css",
-    "main.js": "/car-leasing-calculator/static/js/main.bc6b30f0.js",
+    "main.css": "/car-leasing-calculator/static/css/main.b50094b2.css",
+    "main.js": "/car-leasing-calculator/static/js/main.56182f2a.js",
     "static/media/Mont-Heavy.woff": "/car-leasing-calculator/static/media/Mont-Heavy.235606fac6f32b88355c.woff",
     "static/media/Mont-SemiBold.woff": "/car-leasing-calculator/static/media/Mont-SemiBold.5d4afcfe00f8d6a38e5f.woff",
     "static/media/Nekst-Black.woff": "/car-leasing-calculator/static/media/Nekst-Black.f0e2921efcf1112b1749.woff",
@@ -13,11 +13,11 @@
     "static/media/Gilroy-Bold.woff2": "/car-leasing-calculator/static/media/Gilroy-Bold.ef7c40ff1efeaaa4c7c6.woff2",
     "static/media/Gilroy-Regular.woff2": "/car-leasing-calculator/static/media/Gilroy-Regular.f6c9931fabe5a6eb3307.woff2",
     "index.html": "/car-leasing-calculator/index.html",
-    "main.265323f1.css.map": "/car-leasing-calculator/static/css/main.265323f1.css.map",
-    "main.bc6b30f0.js.map": "/car-leasing-calculator/static/js/main.bc6b30f0.js.map"
+    "main.b50094b2.css.map": "/car-leasing-calculator/static/css/main.b50094b2.css.map",
+    "main.56182f2a.js.map": "/car-leasing-calculator/static/js/main.56182f2a.js.map"
   },
   "entrypoints": [
-    "static/css/main.265323f1.css",
-    "static/js/main.bc6b30f0.js"
+    "static/css/main.b50094b2.css",
+    "static/js/main.56182f2a.js"
   ]
 }
