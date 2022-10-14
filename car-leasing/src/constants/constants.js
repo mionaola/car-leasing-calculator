@@ -1,0 +1,1 @@
+export const SERVER_URL = 'https://hookb.in/eK160jgYJ6UlaRPldJ1P';

@@ -1,0 +1,26 @@
+.item-wrapper {
+    position: relative;
+    width: 100%;
+    color: #575757;
+}
+
+.item-wrapper:not(:last-of-type) {
+    margin-right: 32px;
+}
+
+@media(max-width: 1119px) {
+    .item-wrapper {
+        max-width: none;
+    }
+
+    .item-wrapper:not(:last-of-type) {
+        margin-right: 0px;
+        margin-bottom: 32px;
+    }
+}
+
+@media(max-width: 320px) {
+    .item-wrapper {
+        max-width: 280px;
+    }
+}

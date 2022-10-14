@@ -1,0 +1,17 @@
+.inputs-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+@media(max-width: 1119px) {
+    .inputs-wrapper {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 320px) {
+    .inputs-wrapper {
+        margin-bottom: 25px;
+    }
+}

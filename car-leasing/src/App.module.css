@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+
+.header {
+    font-size: 5.4rem;
+    margin-bottom: 32px;
+    width: 70%;
+}
+
+@media (max-width: 1119px) {
+    .container {
+        margin-top: 64px;
+    }
+
+    .header {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin-top: 44px;
+    }
+}
+
+@media(max-width:539px) {
+    .header {
+        font-size: 4.4rem;
+    }
+}
+
+@media(max-width: 320px) {
+    .header {
+        font-size: 3.4rem;
+    }
+}
