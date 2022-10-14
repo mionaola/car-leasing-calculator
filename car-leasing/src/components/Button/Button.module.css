@@ -17,6 +17,7 @@
     -moz-transition: background-color .2s ease-in-out;
     -ms-transition: background-color .2s ease-in-out;
     -o-transition: background-color .2s ease-in-out;
+    text-align: center;
 }
 
 .button:not([disabled]):hover {
@@ -31,6 +32,30 @@
     opacity: 0.4;
     cursor: not-allowed;
 }
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 5px;
+    vertical-align: -0.125em;
+    border: 0.1em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-animation: .75s linear infinite spin;
+    animation: .75s linear infinite spin;
+}
+
 
 @media(max-width: 1439px) {
     .button {

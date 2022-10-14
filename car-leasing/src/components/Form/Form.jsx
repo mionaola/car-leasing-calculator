@@ -69,9 +69,10 @@ export const Form = () => {
             monthly_payment: countData.monthlyPayment,
             leasingCost: countData.leasingCost
         }
-
-        sendForm(SERVER_URL, data);
         setIsFormSent(true);
+        setTimeout(() => {
+            sendForm(SERVER_URL, data, setIsFormSent);
+        }, 2000);
     }
 
     //Gets data from Count components to send it to a server
