@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { useCallback } from 'react';
 import { useState } from 'react';
 import { SERVER_URL } from '../../constants/constants';
 import { sendForm } from '../../utils/functions';
@@ -14,50 +15,50 @@ export const Form = () => {
     const [cost, setCost] = useState('3300000');
     const [initialFeeRate, setInitialFeeRate] = useState('10');
     const [term, setTerm] = useState('60');
-    const [initialFee, setInitialFee] = useState('330000'); // Я поменяла значение первоначального взноса, так как заданное не соответсвовало введенным по умолчанию данным.
+    const [initialFee, setInitialFee] = useState('330000');
     const [isFormSent, setIsFormSent] = useState(false);
     const [countData, setCountData] = useState({});
 
     const onCostChangeHandler = (event) => {
         setCost(event.target.value);
         countInititalFee();
-    }
+    };
 
     const onInitialFeeChangeHandler = (event) => {
         setInitialFeeRate(event.target.value);
         countInititalFee();
-    }
+    };
 
     const onTermChangeHandler = (event) => {
         setTerm(event.target.value);
-    }
+    };
 
-    const countInititalFee = () => {
+    const countInititalFee = useCallback(() => {
         setInitialFee(Math.floor(parseFloat(initialFeeRate / 100 * cost)));
-    }
+    }, [setInitialFee, initialFeeRate, cost]);
 
     //Input validation
     const onCostBlur = (event) => {
         if (Number(event.target.value) > 6000000) setCost('6000000');
         if (Number(event.target.value) < 1000000) setCost('1000000');
-    }
+    };
 
     const onInitialFeeRateBlur = (event) => {
         if (Number(event.target.value) > 60) setInitialFeeRate('60');
         if (Number(event.target.value) < 10) setInitialFeeRate('10');
-    }
+    };
 
     const onTermBlur = (event) => {
         if (Number(event.target.value) > 60) setTerm('60');
         if (Number(event.target.value) < 1) setTerm('1');
-    }
+    };
 
     useEffect(() => {
         countInititalFee();
         if (cost === '' || term === '' || initialFeeRate === '') {
             setInitialFee('100 000');
         }
-    }, [cost, initialFee, term, initialFeeRate]);
+    }, [cost, initialFee, term, initialFeeRate, countInititalFee]);
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -73,12 +74,12 @@ export const Form = () => {
         setTimeout(() => {
             sendForm(SERVER_URL, data, setIsFormSent);
         }, 2000);
-    }
+    };
 
     //Gets data from Count components to send it to a server
     const getCountData = (data) => {
         setCountData(data);
-    }
+    };
 
     let data = {
         cost: cost,

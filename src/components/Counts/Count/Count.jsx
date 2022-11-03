@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import { useMemo } from 'react';
+import { useRef } from 'react';
+import { useCallback } from 'react';
 import { useState } from 'react';
 import s from './Count.module.css';
 
@@ -7,20 +10,23 @@ export const Count = ({ label, data, getCountData }) => {
     const [leasingCost, setLeasingCost] = useState('');
 
     let { cost, initialFee, term } = data;
+    let countData = useRef();
 
-    const countData = {
-        monthlyPayment: monthlyPayment,
-        leasingCost: leasingCost
-    };
+    useMemo(() => {
+        countData.current = {
+            monthlyPayment: monthlyPayment,
+            leasingCost: leasingCost
+        };
+    }, [monthlyPayment, leasingCost]);
 
-    const countMonthlyPayment = () => {
+    const countMonthlyPayment = useCallback(() => {
         const payment = (cost - initialFee) * ((0.035 * Math.pow((1 + 0.035), term)) / (Math.pow((1 + 0.035), term) - 1));
         setMonthlyPayment(payment.toFixed(0));
-    }
+    }, [cost, initialFee, term, setMonthlyPayment])
 
-    const countLeasingCost = () => {
+    const countLeasingCost = useCallback(() => {
         setLeasingCost(parseFloat(initialFee + term * monthlyPayment).toFixed(0));
-    }
+    }, [setLeasingCost, initialFee, term, monthlyPayment])
 
     useEffect(() => {
         countMonthlyPayment();
@@ -29,11 +35,11 @@ export const Count = ({ label, data, getCountData }) => {
             setMonthlyPayment('36 000');
             setLeasingCost('2 260 000');
         }
-    }, [cost, term, initialFee, monthlyPayment]);
+    }, [cost, term, initialFee, monthlyPayment, countMonthlyPayment, countLeasingCost, setMonthlyPayment, setLeasingCost]);
 
     useEffect(() => {
         getCountData(countData);
-    }, [monthlyPayment, leasingCost]);
+    }, [countData, getCountData]);
 
     const isMonthlyPayment = label === 'Ежемесячный платеж от';
     return (
